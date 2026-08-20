@@ -1,0 +1,8 @@
+#!/bin/sh
+
+terraform fmt -check -recursive . || \
+{
+    echo "^^^^" >&2
+    echo "    Format your Terraform code!" >&2
+    exit 1;
+}
